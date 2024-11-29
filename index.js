@@ -10,4 +10,3 @@ app.get("/product", (req, res) => {
 });
 
 app.listen(8000, () => console.log("Server up!"));
-//
