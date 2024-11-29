@@ -1,12 +1,11 @@
 import express from "express";
+import products from "./products.js";
 
 const app = express();
 
-// Query string
+// Sending json data from backend to client
 app.get("/product", (req, res) => {
-  const { model, id } = req.query;
-  console.log(`Product Model: ${model}, Product Id: ${id}`);
-  res.send("Response ok")
+  res.json(products);
 });
 
 app.listen(8000, () => console.log("Server up!"));
