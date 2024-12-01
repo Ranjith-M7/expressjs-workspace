@@ -1,0 +1,34 @@
+// validating the user request to the user, authenticate the user, authorization the usetr - middleware
+// request - middleware - response
+
+= index.js =
+import express from "express";
+import userCredentials from "./middlewares/log.js";
+
+const app = express();
+
+app.use(userCredentials);
+
+app.get("/", (req, res) => {
+  res.send("<h1>Home Screen</h1>");
+  console.log("Response ok");
+});
+app.get("/about", (req, res) => {
+  res.send("<h1>About Screen</h1>");
+  console.log("Response ok");
+});
+
+app.listen(8000, () => console.log("Server up!"));
+
+
+
+
+
+= /middleware/log.js =
+function userCredentials(req, res, next) {
+  console.log("Username: Huxn");
+  console.log("Password: alex1234");
+  next();
+}
+
+export default userCredentials;
