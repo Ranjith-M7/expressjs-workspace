@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+</head>
+
+<body>
+    <!-- Display varible -->
+    <%= name %>
+
+        <!-- Conditional Rendering  -->
+        <% if (userId===20) {%>
+            <h1>UserID: <%= userId%>
+            </h1>
+            <% } else if(userId===2) {%>
+                <h2>userID: <%= userId %>
+                </h2>
+                <% } else {%>
+                    <h3>Nothing...</h3>
+                    <% } %>
+</body>
+
+</html>
